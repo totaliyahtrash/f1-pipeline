@@ -11,3 +11,68 @@ and analyses Formula 1 race data from any season, any race.
 - **Report** — Auto-generates a formatted race summary saved to txt
 
 ## Results — 2024 Italian GP (Monza)
+
+ Winner: Charles Leclerc — Ferrari — 25pts
+ Oscar Piastri — McLaren — 18pts
+ Lando Norris — McLaren — 16pts
+ Constructor Standings:
+ Ferrari — 37pts | McLaren — 34pts | Mercedes — 16pts
+ Driver of the Race: Franco Colapinto — gained 6 positions on F1 debut
+
+ ## Tech Stack
+
+- Python 3.14
+- FastF1 — F1 telemetry and race data library
+- JSON — raw and cleaned data storage
+- Modular ETL architecture
+
+## Project Structure
+
+f1-pipeline/
+│
+├── pipeline/
+│   ├── extractor.py      # pulls data from FastF1 API
+│   ├── transformer.py    # cleans and normalises raw data
+│   ├── analyzer.py       # race analytics and insights
+│   └── writer.py         # generates formatted report
+│
+├── data/
+│   ├── raw/              # raw JSON from FastF1
+│   └── cleaned/          # transformed data
+│
+├── reports/
+│   └── summary.txt       # auto-generated race report
+│
+├── main.py               # pipeline orchestrator
+└── requirements.txt
+
+
+## How to run
+
+```bash
+pip install fastf1
+python main.py
+```
+
+Change the race and year in `main.py`:
+
+```python
+run_pipeline(2024, 'Monza')      # 2024 Italian GP
+run_pipeline(2023, 'Silverstone') # 2023 British GP
+run_pipeline(2025, 'Australia')   # 2025 Australian GP
+```
+
+Works for any race from 1950–2025.
+
+## What I learned building this
+
+- Modular pipeline architecture — each file has one job
+- Real-world data cleaning — handling NaN, wrong types, messy time formats
+- Error handling — DNF drivers don't crash the pipeline
+- File I/O — raw → cleaned → report flow
+- Working with a real sports data library (FastF1)
+
+## Author
+
+Dhruv | Aspiring Data Engineer  
+github.com/syntaxdsamurai
