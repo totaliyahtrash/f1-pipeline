@@ -28,23 +28,29 @@ and analyses Formula 1 race data from any season, any race.
 
 ## Project Structure
 
+\```
 f1-pipeline/
 │
 ├── pipeline/
-│   ├── extractor.py      # pulls data from FastF1 API
-│   ├── transformer.py    # cleans and normalises raw data
-│   ├── analyzer.py       # race analytics and insights
-│   └── writer.py         # generates formatted report
+│   ├── __init__.py
+│   ├── extractor.py
+│   ├── transformer.py
+│   ├── analyzer.py
+│   └── writer.py
 │
 ├── data/
-│   ├── raw/              # raw JSON from FastF1
-│   └── cleaned/          # transformed data
+│   ├── raw/
+│   │   └── race_results.json
+│   └── cleaned/
+│       └── Monza2024.json
 │
 ├── reports/
-│   └── summary.txt       # auto-generated race report
+│   └── summary.txt
 │
-├── main.py               # pipeline orchestrator
-└── requirements.txt
+├── main.py
+├── requirements.txt
+└── README.md
+\```
 
 
 ## How to run
