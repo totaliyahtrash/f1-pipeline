@@ -11,14 +11,14 @@ and analyses Formula 1 race data from any season, any race.
 - **Report** — Auto-generates a formatted race summary saved to txt
 
 ## Results — 2024 Italian GP (Monza)
-
+```
  Winner: Charles Leclerc — Ferrari — 25pts
  Oscar Piastri — McLaren — 18pts
  Lando Norris — McLaren — 16pts
  Constructor Standings:
  Ferrari — 37pts | McLaren — 34pts | Mercedes — 16pts
  Driver of the Race: Franco Colapinto — gained 6 positions on F1 debut
-
+```
  ## Tech Stack
 
 - Python 3.14
