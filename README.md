@@ -28,7 +28,7 @@ and analyses Formula 1 race data from any season, any race.
 
 ## Project Structure
 
-\```
+```
 f1-pipeline/
 │
 ├── pipeline/
@@ -50,7 +50,7 @@ f1-pipeline/
 ├── main.py
 ├── requirements.txt
 └── README.md
-\```
+```
 
 
 ## How to run
