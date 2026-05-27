@@ -81,4 +81,3 @@ Works for any race from 1950–2025.
 ## Author
 
 Dhruv | Aspiring Data Engineer  
-github.com/syntaxdsamurai
